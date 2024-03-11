@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+   
+}
+
+.content h1 {
+    font-size: 96px;
+    /* white-space: nowrap; */
+  }
+
+.button{
+    background: black;
+    color: white;
+    border: 2px solid black;
+    font-size: 20px;
+  }
+
+
+.maincontainer{
+    padding-top: 70px;
+}
+
+.top_section {
+    display: flex;
+    /* align-items: space-between; */
+    justify-content: space-around;
+    align-items: end;
+}
+
+.NumberSection {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.error{
+    color:red;
+}
+.numbers {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.scorenumber{
+    width: 72px;
+    height: 72px;
+    border: 2px solid black;
+    color: black;
+    display: grid;
+    /* text-align: center; */
+    place-items: center;
+    /* align-self: center; */
+    font-size: 24px;
+    font-weight: 700;
+} 
