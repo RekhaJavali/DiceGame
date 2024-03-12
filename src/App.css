@@ -1,20 +1,39 @@
+.gameStartPage{
+    margin: 0 auto;
+}
+
 .container {
     display: flex;
     align-items: center;
     margin: 0 auto;
+    height: 100vh;
+    max-width: 1180px;
    
 }
 
-.content h1 {
-    font-size: 96px;
+.content h1  {
+    font-size: 80px;
+
     /* white-space: nowrap; */
-  }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 
 .button{
     background: black;
     color: white;
     border: 2px solid black;
-    font-size: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 18px;
+    min-width: 220px;
+    border: none;
+    border: 1px solid transparent;
+    cursor: pointer;
   }
 
 
@@ -43,7 +62,21 @@
     gap: 24px;
 }
 
+.selectNum {
+    font-size: 24px;
+    font-weight: 700;
+}
 
+.totalscore{
+    text-align: center;
+}
+.totalscore h1{
+    font-size: 70px;
+}
+
+.totalscore p {
+    font-weight : 700;
+} 
 
 .scorenumber{
     width: 72px;
@@ -56,4 +89,71 @@
     /* align-self: center; */
     font-size: 24px;
     font-weight: 700;
+    cursor: pointer;
 } 
+
+.roleDice{
+    margin-top:5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roleDice p{
+    font-size: 24px;
+}
+
+.dice {
+    cursor: pointer;
+}
+
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:36px;
+}
+
+.resetbtn{
+    padding: 10px;
+    margin: 5px 18px;
+    border-radius: 5px;
+    min-width: 220px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.resetbtn:hover{
+    background-color: black;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 0.3s  ease-in;
+}
+
+.selected {
+    color: white;
+    background-color: black;
+}
+
+.ruleSection{
+    margin: 0 auto;
+    background-color: #fbf1f1;
+    max-width: 500px;
+    margin-top: 20px;
+    padding:10px;
+}
+
+
+section{
+    margin-top: 24px;
+}

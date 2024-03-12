@@ -7,7 +7,7 @@ import { GamePlay } from './components/GamePlay';
 import './App.css'
 
 function App() {
-  const [isGameStarted, setIsGameStarted] = useState(true);
+  const [isGameStarted, setIsGameStarted] = useState(false);
 
   const toggleGamePlay = () => {
     setIsGameStarted((prev)=>!prev);
@@ -17,13 +17,14 @@ function App() {
 
   return (
     <>
-    {isGameStarted ?
-        <GamePlay />
-      :
+    <div className='gameStartPage'>
+        {isGameStarted ?
+            <GamePlay />
+          :
 
-      <StartGame toggle ={toggleGamePlay} />
-    }
-
+          <StartGame toggle ={toggleGamePlay} />
+        }
+    </div>
     </>
   )
 }
