@@ -62,7 +62,7 @@
     gap: 24px;
 }
 
-.selectNum {
+.totalscore p , .selectNum {
     font-size: 24px;
     font-weight: 700;
 }
@@ -74,9 +74,10 @@
     font-size: 70px;
 }
 
-.totalscore p {
+/* .totalscore p {
+    font-size: 18px;
     font-weight : 700;
-} 
+}  */
 
 .scorenumber{
     width: 72px;
