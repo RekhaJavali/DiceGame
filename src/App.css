@@ -29,11 +29,13 @@
     border: 2px solid black;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: 600;
     padding: 10px 18px;
     min-width: 220px;
     border: none;
     border: 1px solid transparent;
     cursor: pointer;
+   
   }
 
 
@@ -56,6 +58,8 @@
 
 .error{
     color:red;
+    font-size: 20px;
+
 }
 .numbers {
     display: flex;
@@ -125,6 +129,7 @@
     color: black;
     background-color: white;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
 }
 
