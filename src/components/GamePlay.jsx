@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Rules } from "./Rules";
+import { RollDice } from "./RollDice";
+import { TotalScore } from "./TotalScore";
+import { NumberSelector } from "./NumberSelector";
 
 export function GamePlay(){
     const [ score, setScore ] = useState(0);
@@ -43,48 +46,27 @@ export function GamePlay(){
 
         setSelectNumber(null);
     }
+//moving to NumberSelector comp.
+    // const diceNum = [1,2,3,4,5,6];
 
-    const diceNum = [1,2,3,4,5,6];
-
-    const handleSelectNum = (num)=>{
-        setSelectNumber(num);
-        setError("");
-    }
+    // const handleSelectNum = (num)=>{
+    //     setSelectNumber(num);
+    //     setError("");
+    // }
 
     return(
         <>
             <div className="maincontainer">
                 <div className="top_section">
-                    <div className="totalscore">
-                        <h1>{score}</h1>
-                        <p>Total Score</p>
-                    </div>
-                    <div className="NumberSection">
-                        <p className="error">
-                            {error}
-                        </p>
-                        <div className="numbers">
-                            {/* <p className="scorenumber">1</p>
-                            <p className="scorenumber">2</p>
-                            <p className="scorenumber">3</p>
-                            <p className="scorenumber">4</p>
-                            <p className="scorenumber">5</p>
-                            <p className="scorenumber">6</p> */}
-                            {diceNum.map((numVal, index)=>{
-                                return (<p key={index} className={numVal === selectNumber ? "scorenumber selected" : "scorenumber" }  onClick={()=>handleSelectNum(numVal)}>{numVal}</p>)
-                            })}
-
-                        </div>
-                        <p className="selectNum">Select Number</p>
-                    </div>                       
+                    <TotalScore score = {score} />
+                    <NumberSelector error ={error} setError={setError} selectNumber={selectNumber} setSelectNumber={setSelectNumber} />                      
                 </div>
 
-                <div className="roleDice">
-                    <div className="dice" onClick = {handleroleDice}>
-                        <img src = {`../src/assets/images/dice/dice_${currentDice}.png`} alt ="rolediceimage"></img>
-                    </div>
-                    <p>Clcik on Dice to roll</p>
-                </div>
+                <RollDice doroledice = {handleroleDice} 
+                        currentDicenum = {currentDice}
+                        selectNumber ={selectNumber} 
+                        setSelectNumber = {setSelectNumber}/>
+                
                 <div className="btns">
                     <button className="resetbtn" onClick = {resetScore}>Reset Score</button>
                     <button className="button" onClick = {handleshowRules}>{showRules ? "Hide": "Show"} Rules</button>
